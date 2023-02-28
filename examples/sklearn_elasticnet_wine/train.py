@@ -65,7 +65,7 @@ if __name__ == "__main__":
         f1.write(r)
         f1.close()
         f2 = open('artifactpath.txt', 'w')
-        p = run.artifact_uri
+        p = artifact_uri
         f2.write(p)
         f2.close()
         lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
