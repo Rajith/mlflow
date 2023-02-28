@@ -60,6 +60,14 @@ if __name__ == "__main__":
         print("Active run_id: {}".format(run.info.run_id))
         artifact_uri = mlflow.get_artifact_uri()
         print("Artifact uri: {}".format(artifact_uri))
+        f1 = open('runid.txt', 'w')
+        r = run.info.run_id
+        f1.write(r)
+        f1.close()
+        f2 = open('artifactpath.txt', 'w')
+        p = run.artifact_uri
+        f2.write(p)
+        f2.close()
         lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
         lr.fit(train_x, train_y)
 
